@@ -84,7 +84,7 @@ export class Guard {
 
     for(let num of numbers) {
       const numIsInRangeResult = this.inRange(num, min, max, argumentName);
-      if (!numIsInRangeResult.isFailure) failingResult = numIsInRangeResult;
+      if (numIsInRangeResult.isFailure) failingResult = numIsInRangeResult;
     }
 
     if (failingResult) {
